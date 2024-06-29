@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/ingresar_servicio.css"">
+    <title>Registrar</title>
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <main>
+
+        <section>
+            <div class="container-form">
+
+                <form action="">
+                    <div class="entrada">
+                        <label for="cliente">Cliente:</label>
+                        <input type="text" name="cliente" id="cliente">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="cuit">Cuit:</label>
+                        <input type="number" name="cuit" id="cuit">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="fecha">Fecha:</label>
+                        <input type="number" name="fecha" id="fecha">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="encargo">Encargo:</label>
+                        <input type="text" name="encargo" id="encargo">
+                    </div>
+
+                    <div class="entrada">
+                        <button class="modificar" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="../static/js/ingresar_servicio.js"></script>
+    <script src="../static/js/header.js"></script>
+</body>
+
+</html>

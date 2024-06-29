@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/index.css">
     <title>Document</title>
 </head>
 <body>
-    
+
+    <header id="header"></header>
+
+    <main>
+
+        <section class="container">
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <a class="nuevo" href="templates/ingresar_servicio.html">Nuevo</a>
+
+                <!-- <section v-if="error">Lo sentimos se produjo un error</section> -->
+                <!-- <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section> -->
+
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Cuit</th>
+                                        <th>Fecha</th>
+                                        <th>Encargo</th>
+                                        <th>Acciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="servicio in servicios">
+                                        <td >{{servicio.id}}</td>
+                                        <td>{{servicio.cliente}}</td>
+                                        <td>{{servicio.cuit}}</td>
+                                        <td>{{servicio.fecha}}</td>
+                                        <td>{{servicio.encargo}}</td>
+                                       
+                                     
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(servicios.id)">Eliminar</button>
+                                        </td>
+                                        <td>
+                                            <a class="boton" :href="'templates/editar_servicio.html?id='+ servicios.id+'&cliente=' +servicios.cliente+ '&cuit='+servicios.cuit+'&fecha='+servicios.fecha +  '&encargo='+servicios.encargo">Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/header.js"></script>
 </body>
 </html>
