@@ -13,12 +13,10 @@ let datos = new URLSearchParams(cadena);
 let resultado = {};
 
 // Iterar sobre los parámetros y guardar los nombres y valores en el objeto resultado
-for (const [cliente, valor] of datos) {
-    resultado[cliente] = valor;
-    resultado[cuit] = valor;
-    resultado[fecha] = valor;
-    resultado[encargo] = valor
+for (const [nombre, valor] of datos) {
+    resultado[nombre] = valor;
 }
+
 
 // Imprimir el resultado
 // console.log(resultado); // Esto mostrará un objeto con las variables y sus valores

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/index.css">
-    <title>Document</title>
+    <title>Catalina servicios transporte</title>
 </head>
 <body>
 
@@ -51,10 +51,10 @@
                                        
                                      
                                         <td>
-                                            <button type="button"  v-on:click="eliminar(servicios.id)">Eliminar</button>
+                                            <button type="button"  v-on:click="eliminar(servicio.id)">Eliminar</button>
                                         </td>
                                         <td>
-                                            <a class="boton" :href="'templates/editar_servicio.html?id='+ servicios.id+'&cliente=' +servicios.cliente+ '&cuit='+servicios.cuit+'&fecha='+servicios.fecha +  '&encargo='+servicios.encargo">Editar</a>
+                                            <a class="boton" :href="'templates/editar_servicio.html?id='+ servicio.id+'&cliente=' +servicio.cliente+ '&cuit='+servicio.cuit+'&fecha='+servicio.fecha +  '&encargo='+servicio.encargo">Editar</a>
                                         </td>
                                     </tr>
                                 </tbody>

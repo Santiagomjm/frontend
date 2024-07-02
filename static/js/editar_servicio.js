@@ -1,9 +1,9 @@
 function modificar() {
-    let id = document.getElementById("id").value
-    let cliente_ingresado = document.getElementById("cliente").value
-    let cuit_ingresado = document.getElementById("cuit").value 
-    let fecha_ingresada = document.getElementById("fecha").value 
-    let encargo_ingresado = document.getElementById("encargo").value 
+    let id = document.getElementById("id").value;
+    let cliente_ingresado = document.getElementById("cliente").value;
+    let cuit_ingresado = document.getElementById("cuit").value; 
+    let fecha_ingresada = document.getElementById("fecha").value; 
+    let encargo_ingresado = document.getElementById("encargo").value; 
 
     let datos = {
         cliente: cliente_ingresado,
@@ -17,13 +17,11 @@ function modificar() {
     let url = "https://catalinatransporte.pythonanywhere.com/update/"+id
     var options = {
         body: JSON.stringify(datos),
-        method: 'PUT',
-        
+        method: 'PUT',        
         headers: { 'Content-Type': 'application/json' },
-        // el navegador seguirá automáticamente las redirecciones y
-        // devolverá el recurso final al que se ha redirigido.
         redirect: 'follow'
-    }
+    };
+
     fetch(url, options)
         .then(function () {
             console.log("modificado")
