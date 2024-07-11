@@ -4,30 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/index.css">
-    <title>Catalina servicios transporte</title>
+    <link rel="icon" href="./static/assets/icons/pesta+¦a.png" type="image/x-icon">
+    <title>CATALINA SERVICIOS</title>
 </head>
 <body>
 
-    <header id="header"></header>
+    <!-- Encabezado con barra de navegación -->
+    <header id="header" style="display: none;">
+        <nav class="menu" id="navMenu">
+            <a href="../index.html">Inicio</a>
+            <a href="../templates/ingresar_servicio.html">Registrar servicio</a>
+            <a id="logoutButton" style="display: none;">Cerrar sesión</a>
+        </nav>
+    </header>
 
-    <main>
+    <!-- Formulario de Login -->
+    <div id="login-container" class="login-container">
+        <h1>Bienvenido!</h1>
+        <div>
+            <h2>Inicia Sesión</h2>
+        </div>
+        <form id="loginForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
 
-        <section class="container">
-            <div id="app" >
-
-                <!-- Botón Nuevo -->
-                <a class="nuevo" href="templates/ingresar_servicio.html">Nuevo</a>
-
-                <!-- <section v-if="error">Lo sentimos se produjo un error</section> -->
-                <!-- <section v-else>
-                    <section v-if="cargando">
-                        <p>Cargando .....</p>
-
-                    </section> -->
+    <!-- Contenido principal -->
+    <div id="main-content" style="display: none;">
+        <main>
+            <section class="container">
+                <div id="app">
+                    <!-- Botón Nuevo -->
+                    <a class="nuevo" href="templates/ingresar_servicio.html">Nuevo</a>
 
                     <section v-else>
-                        
-                        <div >
+                        <div>
                             <table class="tabla">
                                 <thead>
                                     <tr>
@@ -41,37 +61,35 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
                                     <tr v-for="servicio in servicios">
-                                        <td >{{servicio.id}}</td>
+                                        <td>{{servicio.id}}</td>
                                         <td>{{servicio.cliente}}</td>
                                         <td>{{servicio.cuit}}</td>
                                         <td>{{servicio.fecha}}</td>
                                         <td>{{servicio.encargo}}</td>
-                                       
-                                     
                                         <td>
-                                            <button type="button"  v-on:click="eliminar(servicio.id)">Eliminar</button>
+                                            <button type="button" v-on:click="eliminar(servicio.id)">Eliminar</button>
                                         </td>
                                         <td>
-                                            <a class="boton" :href="'templates/editar_servicio.html?id='+ servicio.id+'&cliente=' +servicio.cliente+ '&cuit='+servicio.cuit+'&fecha='+servicio.fecha +  '&encargo='+servicio.encargo">Editar</a>
+                                            <a class="boton" :href="'templates/editar_servicio.html?id=' + servicio.id + '&cliente=' + servicio.cliente + '&cuit=' + servicio.cuit + '&fecha=' + servicio.fecha + '&encargo=' + servicio.encargo">Editar</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
-                </section>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer></footer>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Codo a codo💻, 2024</p>
+            <p>Catalina || Victor || Santiago</p>
+        </footer>
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./static/js/index.js"></script>
     <script src="./static/js/header.js"></script>
+    <script src="./static/js/script.js"></script> <!-- Enlace al archivo JavaScript -->
 </body>
 </html>

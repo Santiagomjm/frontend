@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"https://catalinatransporte.pythonanywhere.com/servicios", // Retorna todos los registro de la tabla productos
+        url:"https://catalinatransporte.pythonanywhere.com/servicios", // Retorna todos los registro de la tabla servicios
         servicios:[],
         error:false,
         cargando:true
@@ -39,7 +39,7 @@ const { createApp } = Vue
             fetch(url, options)
                 .then(res => res.text()) // or res.json()
                 .then(res => {
-                    alert("Eliminado correctamente")
+                    alert("Pedido eliminado correctamente")
                     location.reload();
                 })
         }

@@ -23,7 +23,7 @@ function guardar() {
     fetch(url, options)
         .then(function () {
             console.log("creado")
-            alert("Grabado")
+            alert("Pedido Anotado!")
             // Devuelve el href (URL) de la página actual
             window.location.href = "../index.html";  
             

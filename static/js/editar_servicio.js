@@ -25,7 +25,7 @@ function modificar() {
     fetch(url, options)
         .then(function () {
             console.log("modificado")
-            alert("Registro modificado")
+            alert("Pedido modificado!")
 
             //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
            window.location.href = "../index.html";
