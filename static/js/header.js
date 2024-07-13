@@ -11,7 +11,7 @@ const header = document.getElementById("header");
 // `;
 document.getElementById("header").innerHTML= `
 
-            <img class="mini-logo" src="/static/img/logo-prin.png" alt="">
+            <img class="mini-logo" src="/static/icons/logo-prin.png" alt="">
 <nav class="menu">
             <a href="../index.html">Tabla</a>
             <a href="../templates/ingresar_servicio.html">Registrar servicio</a>
